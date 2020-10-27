@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="style.css"> 
+<!-- <script type="text/javascript" src="./script.js"></script> -->
+
+   
+    <title>rock,paper,scissors</title>
+</head>
+<body>
+    <header>
+     <h1>Rock Paper Scissors</h1>    
+    </header>
+
+
+
+<div class="result">
+    <p id="answer">
+
+
+    </p>
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-sm-8">
+    <div class=" score-board">
+                <div id="user-label" class="badge">User</div>
+                <span id="user-scores">0</span>
+                <div id="computer-label" class="badge">Comp</div>
+               
+                <span id="computer-score">0</span>
+                
+                    </div>
+                   
+    </div>
+    </div>
+            </div> 
+
+                <div class="pickers">
+
+<div class="pick" id="paper" data-selection="paper">
+    <img src="https://www.pinclipart.com/picdir/middle/51-511523_rock-paper-rock-paper-scissors-clipart-png-download.png">
+ 
+</div>
+
+<div class="pick" id="scissors" data-selection="scissors">
+    <img src="https://www.kindpng.com/picc/m/502-5025731_scissors-clipart-png-download-rock-paper-scissors-clipart.png">
+
+</div>
+
+<div class="pick" id="rock" data-selection="rock">
+
+
+    <img src="https://www.clipartmax.com/png/middle/94-942198_%240-19-rock-paper-scissors-png.png">
+ 
+</div>
+
+         </div>
+
+
+                <div class="container">
+                    <div class="row">
+              
+                   <div class="col-sm-3" id="PAPER"></div>
+                      <div class="col-sm-3" id="SCISSORS"></div>
+                      <div class="col-sm-3" id="ROCK"></div>
+                    </div>  
+                  </div>
+ 
+                  <div class="container" id="answer">
+                      
+                  </div>
+
+<script>
+  let rock = document.getElementById("rock")
+let scissors = document.getElementById("scissors")
+let paper = document.getElementById("paper")
+
+const pap = paper.addEventListener('click', function(){
+    document.getElementById("PAPER").style.color ="white"
+    document.getElementById("PAPER").style.fontSize = "25px"
+   // document.getElementById("PAPER").innerHTML ="PAPER"
+
+    if("Scissors" === computerShow){
+        document.getElementById('answer').textContent = "Paper" + " " +  "you lost, try, try try again"   
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+     
+        document.getElementById("computer-score").textContent = score ++
+
+    }else if ("Rock" === computerShow){
+        document.getElementById('answer').textContent = "Paper" + " " + "won against Rock"+ " "    
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+        document.getElementById("user-scores").textContent = score ++
+  
+    } else if("Paper" === computerShow){
+        document.getElementById('answer').textContent = "Paper" + " " + "you have tie"
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+      
+
+    }
+
+})
+
+
+const roc = rock.addEventListener('click', function(){
+    document.getElementById("ROCK").style.color ="white"
+    document.getElementById("ROCK").style.fontSize = "25px"
+
+
+    if("Scissors" === computerShow){
+        document.getElementById('answer').textContent = "Rock" + " " +  "you won! You are pretty good!"   
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+        document.getElementById("user-scores").textContent = score ++
+
+    }else if ("Rock" === computerShow){
+        document.getElementById('answer').textContent = "Rock," + " " + "you have a tie buddy!"  
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+
+    } else if("Paper" === computerShow){
+        document.getElementById('answer').textContent = "Rock," + " " + "you lost to paper man!"
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+        document.getElementById("computer-score").textContent = score ++
+
+
+    }
+})
+
+const sci = scissors.addEventListener('click', function(){
+    document.getElementById("SCISSORS").style.color ="white"
+ //document.getElementById("SCISSORS").style.fontSize = "60px"
+    //
+   //nst s =  document.getElementById("SCISSORS").innerHTML ="SCISSORS"
+    if("Scissors" === computerShow){
+        document.getElementById('answer').textContent = "Scissors," + " " +  "you have a tie!"  
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+
+
+    }else if ("Rock" === computerShow){
+        document.getElementById('answer').textContent = "Scissors" + " " + "lost to Rock!"    
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+        document.getElementById("computer-score").textContent = score ++
+
+    } else if("Paper" === computerShow){
+        document.getElementById('answer').textContent = "Scissors" + " " + "beat paper!" 
+        document.getElementById("answer").style.fontSize = "60px"
+        document.getElementById("answer").style.color ="white"
+       document.getElementById("user-scores").textContent = score ++
+
+    }
+
+})
+
+var score = 1
+
+let computer = ["Paper", "Scissors", "Rock"]
+let computerShow = computer[Math.floor(Math.random() * computer.length)];
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

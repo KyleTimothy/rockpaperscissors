@@ -1,0 +1,70 @@
+body{
+    background-color: steelblue;
+}
+
+header{
+    background:black;
+    padding:20px;
+}
+
+
+header > h1 {
+   color:white;
+   font-size: 8em;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+
+img{
+    margin-bottom: -40em;
+    border-radius: 6em;
+    box-shadow: 6em;
+    width: 250px;
+    height:150px;
+   
+}
+
+.pick{
+    display: inline;
+    margin:50px;
+
+}
+
+.pick{
+    
+    margin-right: 0em;
+    padding:15em;
+}
+
+#user-scores{
+    font-size: 10em;
+   
+}
+
+#computer-score{
+    font-size: 10em;
+}
+
+#user-label{
+    font-size: 5em;
+}
+
+#computer-label{
+    font-size: 5em;
+}
+
+.badge{
+    padding: 10px;
+    padding-right: -5em;
+  
+}
+
+.col-sm-8{
+    margin-right: 15em;
+}
+
+#answer{
+    text-align: center;
+}
